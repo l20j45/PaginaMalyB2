@@ -10,13 +10,21 @@
 .primeraSeccion {
     @include mixins.background-image('../img/Source/1headerNew.webp');
 
-    height: 60vh;
+    height: 100vh;
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
 
     @include media-breakpoint-down(md) {
         height: auto;
+    }
+    @include media-breakpoint-up(md) {
+        h1{
+            margin-top: 200px !important;
+        }
+        .timer{
+            margin-top: 200px !important;
+        }
     }
 }
 
@@ -39,14 +47,15 @@
 .terceraSeccion {
     background-image: url('../img/Source/3codigoSeVestimenta.webp');
 
-    height: 100vh;
+    height: auto;
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
 
     .vestimentaContainer {
         width: 75vw;
-        height: 60vh;
+        max-width: 400px;
+        height: auto;
         margin-top: 100px;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 15px;
@@ -54,7 +63,7 @@
 
         .imagenIcono {
 
-            max-width: 200px;
+            max-width: 150px;
             height: 150px;
             transition: transform 100ms;
             margin-top: -75px;
@@ -74,6 +83,16 @@
         height: 100vh;
     }
 
+}
+
+
+.lugarFiestaSeccion{
+    @include media-breakpoint-up(md) {
+        img{
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
 }
 
 .cuartaSeccion {
@@ -107,6 +126,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 10px;
+    max-width: 450px;
 
     img {
         max-width: 200px;
