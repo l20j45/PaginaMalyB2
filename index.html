@@ -8,475 +8,703 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"
+      async
+      defer
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <header class="py-5 header">
-      <div class="container-xl">
-        <div class="row justify-content-center justify-content-md-between">
-          <div class="col-8 col-md-3">
-            <a href="index.html">
-              <img src="build/img/logo.svg" class="img-fluid" alt=""
-            /></a>
-          </div>
-          <nav
-            class="col-md-6 d-flex flex-column align-items-center flex-md-row justify-content-md-end navegacion"
+    <main class="">
+      <div class="container-fluid primeraSeccion">
+        <div class="row">
+          <div
+            class="col mx-auto text-white d-flex flex-column align-items-center"
           >
-            <a
-              href="index.html"
-              class="d-block px-2 py-1 fs-6 fw-bold text-uppercase text-white"
-              >Inicio</a
-            >
-            <a
-              href="index.html"
-              class="d-block px-2 py-1 fs-6 fw-bold text-uppercase text-white"
-              >Nosotros</a
-            >
-            <a
-              href="index.html"
-              class="d-block px-2 py-1 fs-6 fw-bold text-uppercase text-white"
-              >Blog</a
-            >
-            <a
-              href="index.html"
-              class="d-block px-2 py-1 fs-6 fw-bold text-uppercase text-white"
-              >Tienda</a
-            >
-          </nav>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-6 text-center text-md-start">
-            <h1 class="text-primary">Modelo Vai</h1>
-            <p class="mt-5 fs-5 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus, possimus quibusdam dolor nemo velit quo, fuga omnis,
-              iure molestias optio tempore sint at ipsa dolorum odio
-              exercitationem eos inventore odit.
-            </p>
-            <p class="fs-1 text-primary">$399</p>
-            <a
-              href="Producto.html"
-              class="btn bg-primary fs-4 py-2 px-5 text-white"
-              >Ver Producto</a
-            >
+            <p class="fw-bold mt-5 fs-4">15/septiembre/2024</p>
+            <h1 class="text-center fw-bold mt-5">
+              Te invitamos a nuestra Boda
+            </h1>
+            <div class="d-flex w-100 mt-5 justify-content-center">
+              <div class="cartel">
+                <div id="dias"></div>
+                <div class="mt-2">Días</div>
+              </div>
+              <div class="cartel">
+                <div id="horas"></div>
+                <div class="mt-2">Horas</div>
+              </div>
+
+              <div class="cartel">
+                <div id="minutos"></div>
+                <div class="mt-2">Mins</div>
+              </div>
+              <div class="cartel">
+                <div id="segundos"></div>
+                <div class="mt-2">Segs.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <img
-        src="build/img/header_guitarra.png"
-        class="header-guitarra"
-        alt="imagen header"
-      />
-    </header>
-    <main class="container-xl mt-5">
-      <h2 class="text-center">Nuestro Coleccion</h2>
-      <div class="row mt-5">
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_01.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">Lukater</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
+
+      <div class="container-fluid segundaSeccion mb-5">
+        <div class="row">
+          <div class="col-8 mx-auto d-flex flex-column align-items-center">
+            <div class="iamgeContainer mt-5 mb-5"></div>
+            <h2 class="text-black mt-2 mb-3 text-center">Mali y Rica</h2>
+            <p class="text-center fw-bold text-grey">
+              “Hagamos de nuestras manos una sola mano. Hagamos de nuestros
+              corazones un solo corazón. Hagamos de nuestros juramentos el
+              último juramento. Sólo la muerte nos separará”
             </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
+            <button
+              id="calendarButton"
+              class="btn btn-dark shadow mt-5 w-100 border-3 fs-4"
             >
+              <i class="bi bi-calendar-heart me-2"></i> Agregar a mi calendario
+            </button>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_02.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">SRV</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
+      </div>
+
+      <div class="container-fluid mt-5 terceraSeccion">
+        <div class="row">
+          <div
+            class="col mx-auto text-white d-flex flex-column align-items-center"
+          >
+            <h3 class="mt-5 shadow-lg border-1">Para el evento.</h3>
+            <p class="mt-3 shadow-lg border-1 text-center">
+              Te agradecemos atender las siguientes indicaciones.
             </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
+
+            <div
+              class="vestimentaContainer d-flex flex-column text-center text-black"
             >
+              <img
+                src="./build/img/assets/damaYcaballero.png"
+                class="w-50 mx-auto imagenIcono"
+                alt=""
+              />
+              <h4 class="mt-5 fw-black text-black fs-4 mt-5">
+                Código de vestimenta
+              </h4>
+              <p class="mt-5 w-75 mx-auto text-justify">
+                <span class="fs-4 fw-black"> Riguroso formal</span> <br /><br />
+                <span class="fs-5 fw-bold"> Hombres:</span><br />
+                En caso de llevar traje negro <br />
+                No usar camisa negra <br /><br />
+                <span class="fs-5 fw-bold"> Mujeres:</span> <br />No negro,
+                <br />No Blanco
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_03.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">BORLAND</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
+      </div>
+
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div
+            class="col mx-auto text-white d-flex flex-column align-items-center"
+          >
+            <h2 class="text-black mt-5 mb-3">¡Itinerario!</h2>
+            <p class="text-grey w-75 text-center fs-5">
+              Tu presencia es muy importante para nosotros en cada momento de
+              este día. <br />
+              Agradecemos tu puntualidad
             </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
+            <ul class="timeline timeline-centered mt-5">
+              <li class="timeline-item wow zoomIn fadeIn">
+                <div class="timeline-info">
+                  <span>Septiembre 15 2024, 18:00</span>
+                </div>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-body">
+                    <h3 class="timeline-title">¡Ceremonia en Terraza Ambia!</h3>
+                    <p class="timeline-paragraph"></p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item wow zoomIn fadeIn">
+                <div class="timeline-info">
+                  <span>Septiembre 15 2024, 19:00</span>
+                </div>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-body">
+                    <h3 class="timeline-title">¡Fiesta en terraza Ambia!</h3>
+                    <p class="timeline-paragraph"></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
+      </div>
+
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-10 mx-auto text-grey d-flex flex-column mt-5">
             <img
-              src="build/img/guitarra_04.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
+              src="build/img/Source/4lugarDeLaFiesta.webp"
+              class="img-fluid rounded-5"
+              alt=""
             />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">VAI</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
+            <h2 class="text-black mt-5">Lugar de la fiesta</h2>
+            <p>Lugar: Terraza Ambia</p>
+            <p>Día: 15 de Septiembre de 2024</p>
+            <p>Hora: 19:00</p>
+            <p>Domicilio:José Martí 14, Tonalá Centro, 45400 Tonalá, Jal.</p>
             <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
+              target="_blank"
+              href="https://maps.app.goo.gl/ebDJAKdmj7AsvBZs6"
+              class="btn btn-dark mt-5 w-75"
+              ><i class="bi bi-geo-alt-fill me-3"></i> Ir a lugar
+              <i class="ms-3 bi bi-map"></i
+            ></a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_05.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">THOMPSON</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
+      </div>
+      <div class="container-fluid cuartaSeccion">
+        <div class="row">
+          <div
+            class="col mx-auto text-white d-flex flex-column align-items-center mt-5"
+          >
+            <h2 class="mt-5">Mesa de Regalos</h2>
+            <p class="text-center mt-3 fw-bold">
+              No hay mejor regalo que tener tu compañía en la celebración de
+              nuestra boda, pero si deseas hacernos un detalle contamos con una
+              mesa de regalos o si gustas sumar kilómetros a nuestro viaje
+              dejamos nuestra cuenta bancaria :
             </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
+
+            <div class="cardContainer d-flex flex-column align-items-center">
+              <img
+                src="./build/img/Source/5mesaDeRegalo.webp"
+                class="shadow-lg"
+                alt=""
+              />
+              <h3 class="mt-5 text-black fw-black">LIVERPOOL</h3>
+              <p class="text-grey fw-bold mt-3">Número de evento: 51398897</p>
+              <p class="text-grey fw-bold">Nombre evento: Boda Rica y Mali</p>
+              <div class="d-flex mt-5 mb-5">
+                <a
+                  href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51398897"
+                  target="_blank"
+                  class="fs-1 buttonCard me-5"
+                >
+                  <i class="bi bi-box-arrow-up-right"></i
+                ></a>
+                <a href="" class="fs-1 buttonCard">
+                  <i class="bi bi-share-fill"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="cardContainer d-flex flex-column align-items-center text-grey fs-4 fw-bold text-center"
             >
+              <h3 class="mt-5 text-grey mb-5">DATOS DE LA TARJETA</h3>
+              <p>Tarjeta: 4152 3139 2339 5136</p>
+              <p>BBVA Bancomer</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_06.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">WHITE</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col mx-auto d-flex flex-column align-items-center text-center"
+          >
+            <h2 class="mt-5 text-grey">Galería de aventuras</h2>
+            <div class="row flex gap-10 w-75">
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/1.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #1"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/1.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/2.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #2"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/2.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/3.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #3"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/3.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/4.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #4"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/4.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/5.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #5"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/5.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/6.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #6"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/6.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/7.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #7"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/7.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/8.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #8"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/8.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/9.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #9"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/9.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/10.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #10"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/10.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/11.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #11"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/11.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/12.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #12"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/12.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/13.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #13"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/13.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/14.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #14"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/14.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/15.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #15"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/15.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/16.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #16"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/16.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/17.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #17"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/17.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/18.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #18"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/18.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/19.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #19"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/19.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/20.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #20"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/20.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/21.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #21"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/21.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/22.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #22"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/22.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+              <div class="col-4 galleryImageContainer">
+                <a
+                  href="./build/img/gallery/23.webp"
+                  data-fancybox="gallery"
+                  data-caption="Caption #23"
+                >
+                  <figure style="text-align: center">
+                    <img src="./build/img/gallery/23.webp" class="img-fluid" />
+                  </figure>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_07.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">COBAIN</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
+      </div>
+
+      <div class="container-fluid quintaSeccion">
+        <div class="row w-75 mx-auto rounded-5 bg-white">
+          <div
+            class="col mx-auto d-flex flex-column align-items-center text-center"
+          >
+            <h3 class="text-grey mt-5">¡Confirma tu asistencia por favor!</h3>
+            <p>Haz click en el botón de whatsapp</p>
+
             <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
+              target="_blank"
+              rel="nofollow"
+              href="https://wa.me/5213314140070?text=%C2%A1Hola%21%2C+Quiero+confirmar+mi+invitaci%C3%B3n"
+              class="whatsapp-button"
             >
+              <i class="bi bi-whatsapp"></i>
+            </a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
+      </div>
+
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div
+            class="col mx-auto text-center d-flex flex-column align-items-center"
+          >
+            <h2 class="fw-black text-grey">¡Gracias por acompañarnos!</h2>
+            <p>Les compartimos nuestra sugerencia.</p>
             <img
-              src="build/img/guitarra_08.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
+              src="build/img/Source/graciasPorAcompañarnos.webp"
+              class="img-fluid w-75 rounded-5"
+              alt=""
             />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">DALE</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_09.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">KRIEGER</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_10.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">CAMPBELL</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_11.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">REED</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-          <div class="col-4">
-            <img
-              src="build/img/guitarra_12.jpg"
-              class="img-fluid"
-              alt="imagen guitarra"
-            />
-          </div>
-          <div class="col-8">
-            <h3 class="text-black fs-4 fw-bold text-uppercase">HAZEL</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-              labore odit magnam in autem nesciunt, amet deserunt
-            </p>
-            <p class="fs-3 fw-black text-primary">$299</p>
-            <a
-              href="producto.html"
-              class="bg-black d-block fw-black text-center p-2 text-uppercase"
-              >Ver producto</a
-            >
+            <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
+                  >
+                    Participación
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne"
+                >
+                  <div class="accordion-body">
+                    Favor de confirmar su asistencia lo antes posible para
+                    asegurar tu lugar. En caso de no confirmar antes del 31 de
+                    julio se dará por hecho que no asistirás.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo"
+                  >
+                    NOTAS
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTwo"
+                >
+                  <div class="accordion-body">
+                    Favor de proporcionar al fotógrafo profesional de la boda
+                    todo el espacio necesario para que nuestros recuerdos queden
+                    fabulosos. No interferir entre el fotógrafo y los novios
+                    tratando de tomar fotos propias, en cuanto tengamos las
+                    fotos oficiales con gusto se las compartimos.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree"
+                  >
+                    RECOMENDACIONES
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingThree"
+                >
+                  <div class="accordion-body">
+                    Recuerda ser puntual a la ceremonia para que vivamos juntos
+                    toda la experiencia de nuestro día especial. Y no olvides
+                    asistir con la mejor actitud para que juntos hagamos de esta
+                    fecha un día memorable.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
-    <section class="cursos">
-      <div class="container-xl">
-        <div class="row justify-content-md-end pt-5">
-          <div class="col-md-6 text-center">
-            <h3>Aprende a tocar guitarra</h3>
-            <p class="text-white mt-2 fs-5">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
-              accusantium harum incidunt suscipit a itaque, consectetur, id
-              molestiae adipisci et obcaecati tempore iste ea nisi corrupti illo
-              asperiores repudiandae odit!
-            </p>
-            <a
-              href=""
-              class="bg-primary text-white py-2 px-5 mt-2 fw-black text-uppercase"
-              >Mas informacion</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="blog">
-      <div class="container-xl mt-5">
-        <h2>Nuestro Blog</h2>
-        <div class="row mt-5">
-          <div class="col-md-6 col-lg-3 mb-5">
-            <div class="card">
-              <img
-                src="build/img/blog_1.jpg"
-                class="card-img-top"
-                alt="imagen blog"
-              />
-              <div class="card-body">
-                <h3 class="text-black fw-normal fs-4">
-                  Como elegir tu primer guitarra
-                </h3>
-                <p class="text-primary">20 de Enero de 2022</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facere quibusdam, nesciunt dolores iure minima molestias
-                  voluptas adipisci.
-                </p>
-                <a
-                  href="#"
-                  class="bg-primary text-white py-2 px-5 mt-4 fw-black text-uppercase d-block text-center fs-6"
-                  >Leer entrada</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5">
-            <div class="card">
-              <img
-                src="build/img/blog_1.jpg"
-                class="card-img-top"
-                alt="imagen blog"
-              />
-              <div class="card-body">
-                <h3 class="text-black fw-normal fs-4">
-                  Como elegir tu primer guitarra
-                </h3>
-                <p class="text-primary">20 de Enero de 2022</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facere quibusdam, nesciunt dolores iure minima molestias
-                  voluptas adipisci.
-                </p>
-                <a
-                  href="#"
-                  class="bg-primary text-white py-2 px-5 mt-4 fw-black text-uppercase d-block text-center fs-6"
-                  >Leer entrada</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5">
-            <div class="card">
-              <img
-                src="build/img/blog_1.jpg"
-                class="card-img-top"
-                alt="imagen blog"
-              />
-              <div class="card-body">
-                <h3 class="text-black fw-normal fs-4">
-                  Como elegir tu primer guitarra
-                </h3>
-                <p class="text-primary">20 de Enero de 2022</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facere quibusdam, nesciunt dolores iure minima molestias
-                  voluptas adipisci.
-                </p>
-                <a
-                  href="#"
-                  class="bg-primary text-white py-2 px-5 mt-4 fw-black text-uppercase d-block text-center fs-6"
-                  >Leer entrada</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5">
-            <div class="card">
-              <img
-                src="build/img/blog_1.jpg"
-                class="card-img-top"
-                alt="imagen blog"
-              />
-              <div class="card-body">
-                <h3 class="text-black fw-normal fs-4">
-                  Como elegir tu primer guitarra
-                </h3>
-                <p class="text-primary">20 de Enero de 2022</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facere quibusdam, nesciunt dolores iure minima molestias
-                  voluptas adipisci.
-                </p>
-                <a
-                  href="#"
-                  class="bg-primary text-white py-2 px-5 mt-4 fw-black text-uppercase d-block text-center fs-6"
-                  >Leer entrada</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
-  <footer class="footer bg-dark mt-5 py-5">
-    <div class="container-xl d-md-flex justify-content-md-between">
-      <nav class="d-flex flex-column align-items-center flex-md-row">
-        <a href="index.html" class="text-white fs-4 me-md-2">Inicio</a>
-        <a href="index.html" class="text-white fs-4 me-md-2">Nosotros</a>
-        <a href="index.html" class="text-white fs-4 me-md-2">Blog</a>
-        <a href="index.html" class="text-white fs-4 me-md-2">Tienda</a>
-      </nav>
-      <p class="text-white text-center fs-4 mt-5 m-md-0">Todos los derchos reservados</p>
+    <footer
+      class="footer container-fluid bg-black d-flex flex-column align-items-center text-center"
+    >
+      <a href="" class="btn btn-outline-light mt-4"
+        >Quiero una invitacion como esta</a
+      >
+      <p class="mt-3">© Copyright 2024 . Todos los derechos reservados,</p>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="bi bi-rocket-fill"></i>
     </div>
-  </footer>
+  </body>
+
+  <!-- 
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col mx-auto text-white d-flex flex-column align-items-center"
+          >
+          </div>
+        </div>
+      </div> -->
+
+  <script>
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    let countDown = new Date("Jul 30, 2024 16:38:00").getTime(),
+      x = setInterval(function () {
+        let now = new Date().getTime(),
+          distance = countDown - now;
+
+        (document.getElementById("dias").innerText = Math.floor(
+          distance / day
+        )),
+          (document.getElementById("horas").innerText = Math.floor(
+            (distance % day) / hour
+          )),
+          (document.getElementById("minutos").innerText = Math.floor(
+            (distance % hour) / minute
+          )),
+          (document.getElementById("segundos").innerText = Math.floor(
+            (distance % minute) / second
+          ));
+      }, second);
+  </script>
+  <!-- boton del calendario -->
+  <script type="application/javascript">
+    const config = {
+      name: "Mali &amp; Ricardo",
+      description: "Te invitamos a celebrar Nuestra boda!!!",
+      startDate: "2024-09-15",
+      endDate: "2024-09-16",
+      startTime: "19:00:00",
+      endTime: "01:00:00",
+      location: "terraza ambia",
+      // //TODO - Poiner el lugar donde cera
+      options: ["Apple", "Google", "iCal", "Outlook.com"],
+      timeZone: "America/Mexico_City",
+      trigger: "click",
+      iCalFileName: "SaveTheDate-Event",
+    };
+    const button = document.getElementById("calendarButton");
+    button.addEventListener("click", () => atcb_action(config, button));
+  </script>
+
+  <script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      // Your custom options for a specific gallery
+    });
+  </script>
+
+  <script>
+    //Get the button
+    let mybutton = document.getElementById("back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </html>
