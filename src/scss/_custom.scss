@@ -1,7 +1,7 @@
 // Reescribir variables de bootstrap
 $negro: #262626;
 $blanco: #FFF;
-$naranja: #e99401;
+$naranja: #FFF;
 
 
 //colores
@@ -10,9 +10,9 @@ $white: $blanco;
 $dark: $negro;
 
 //tipografias
-$fuente-headings: 'Outfit',
+$fuente-headings: 'Cinzel Decorative',
 sans-serif;
-$fuente-textos: 'Outfit',
+$fuente-textos: 'Roboto',
 sans-serif;
 
 $headings-font-family: $fuente-headings;
@@ -46,6 +46,10 @@ $card-border-width:0;
 
 // Asignar paleta de colores a Boostrap
 
+body{
+    background-image: url("../img/Source/fondoGlobal.jpg");
+}
+
 // $primary: $verde;
 // $secondary: $gris;
 // $headings-font-family: 'Poppins',
@@ -66,3 +70,4 @@ $card-border-width:0;
 
 // importar bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';

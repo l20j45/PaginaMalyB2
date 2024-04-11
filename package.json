@@ -8,7 +8,7 @@
     "compilar:sass": "sass src/scss:build/css --watch",
     "purgar": "purgecss --css build/css/style.css --content index.html --output build/purgado",
     "postbuild": "node environments/postbuild.js",
-    "minificarimagenes": "imagemin src/img/* --out-dir=build/img/"
+    "minificarimagenes": "imagemin src/img/**/* --out-dir=build/img/"
   },
   "author": "Juan De la torre",
   "license": "ISC",
@@ -20,5 +20,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "sass": "^1.39.2"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
   }
 }
