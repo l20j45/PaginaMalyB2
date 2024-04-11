@@ -23,11 +23,32 @@
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
     <main class="">
+      <div
+        class="audio-button-1"
+        id="audio-button-1"
+        style="background-color: #292929; outline: solid 3px #292929"
+      >
+        <div
+          class="rotate"
+          
+        >
+          <i id="playIcon" class="bi bi-music-note-beamed"></i>
+          <i id="stopIcon" style="display: none;" class="bi bi-slash-circle"></i>
+        </div>
+        <audio
+          id="miCancion"
+          src="./build/media/Cancion.mp3"
+          preload="auto"
+          autoplay
+        ></audio>
+      </div>
+
       <div class="container-fluid primeraSeccion">
         <div class="row">
           <div
@@ -125,32 +146,36 @@
               este día. <br />
               Agradecemos tu puntualidad
             </p>
-            <ul class="timeline timeline-centered mt-5">
-              <li class="timeline-item wow zoomIn fadeIn">
-                <div class="timeline-info">
-                  <span>Septiembre 15 2024, 18:00</span>
-                </div>
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <div class="timeline-body">
-                    <h3 class="timeline-title">¡Ceremonia en Terraza Ambia!</h3>
-                    <p class="timeline-paragraph"></p>
+            <div class="col-8">
+              <ul class="timeline timeline-centered mt-5">
+                <li class="timeline-item wow zoomIn fadeIn">
+                  <div class="timeline-info">
+                    <span>Septiembre 15 2024, 18:00</span>
                   </div>
-                </div>
-              </li>
-              <li class="timeline-item wow zoomIn fadeIn">
-                <div class="timeline-info">
-                  <span>Septiembre 15 2024, 19:00</span>
-                </div>
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <div class="timeline-body">
-                    <h3 class="timeline-title">¡Fiesta en terraza Ambia!</h3>
-                    <p class="timeline-paragraph"></p>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-body">
+                      <h3 class="timeline-title">
+                        ¡Ceremonia en Terraza Ambia!
+                      </h3>
+                      <p class="timeline-paragraph"></p>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li class="timeline-item wow zoomIn fadeIn">
+                  <div class="timeline-info">
+                    <span>Septiembre 15 2024, 19:00</span>
+                  </div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-body">
+                      <h3 class="timeline-title">¡Fiesta en terraza Ambia!</h3>
+                      <p class="timeline-paragraph"></p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -635,7 +660,7 @@
       hour = minute * 60,
       day = hour * 24;
 
-    let countDown = new Date("Jul 30, 2024 16:38:00").getTime(),
+    let countDown = new Date("Sept 15, 2024 18:00:00").getTime(),
       x = setInterval(function () {
         let now = new Date().getTime(),
           distance = countDown - now;
@@ -706,5 +731,50 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+  </script>
+
+  <!-- 
+  con esto abrimos automaticamente un modal de bootstrap
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var myModal = new bootstrap.Modal(document.getElementById("myModal"));
+      myModal.show(); // Abre el modal automáticamente al cargar la página
+    });
+  </script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Swal.fire({
+        title: "¡Bienvenido!",
+        text: "Bienvenido a nuestra invitacion",
+        iconHtml:
+          '<div class="sweerAlertCustomize"> <i class="bi bi-heart-fill sweerAlertCustomize"></i> </div>',
+        confirmButtonText: "Aceptar",
+      });
+    });
+  </script>
+
+  <script>
+    let audioButton1 = true;
+    let buttonMusic = document.getElementById("audio-button-1");
+    let icon1 = document.getElementById("playIcon");
+    let icon2 = document.getElementById("stopIcon");
+    buttonMusic.addEventListener("click", function () {
+      if (audioButton1) {
+        
+        
+        icon1.style.display = "none";
+        icon2.style.display = "block";
+
+        document.getElementById("miCancion").play();
+      } else {
+        
+        icon1.style.display = "block";
+        icon2.style.display = "none";
+
+        document.getElementById("miCancion").pause();
+      }
+      audioButton1 = !audioButton1;
+    });
   </script>
 </html>
