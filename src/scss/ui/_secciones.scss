@@ -167,7 +167,16 @@
     overflow: hidden;
     margin-bottom: 20px;
     object-fit: cover;
+    
 }
+@include media-breakpoint-up(md) {
+    .galleryImageContainer{
+        height: 200px;
+        margin-bottom: 10px;
+        max-width: 280px;
+    }
+}
+
 
 .sweerAlertCustomize{
     border: none;

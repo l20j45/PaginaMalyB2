@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GuitarLA</title>
+    <title>Mali &amp; Ricardo | Te invitamos a celebrar nuestra boda!!!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,12 +34,9 @@
         id="audio-button-1"
         style="background-color: #292929; outline: solid 3px #292929"
       >
-        <div
-          class="rotate"
-          
-        >
+        <div class="rotate">
           <i id="playIcon" class="bi bi-music-note-beamed"></i>
-          <i id="stopIcon" style="display: none;" class="bi bi-slash-circle"></i>
+          <i id="stopIcon" style="display: none" class="bi bi-slash-circle"></i>
         </div>
         <audio
           id="miCancion"
@@ -85,7 +82,7 @@
         <div class="row">
           <div class="col-8 mx-auto d-flex flex-column align-items-center">
             <div class="iamgeContainer mt-5 mb-5"></div>
-            <h2 class="text-black mt-2 mb-3 text-center ">Mali y Rica</h2>
+            <h2 class="text-black mt-2 mb-3 text-center">Mali y Rica</h2>
             <p class="text-center fw-bold text-grey col-md-6">
               “Hagamos de nuestras manos una sola mano. Hagamos de nuestros
               corazones un solo corazón. Hagamos de nuestros juramentos el
@@ -182,10 +179,12 @@
 
       <div class="container-fluid lugarFiestaSeccion">
         <div class="row mt-5 mt-md-0">
-          <div class="col-10 col-md-6 mx-auto text-grey d-flex flex-column mt-5 mt-md-0">
+          <div
+            class="col-10 col-md-6 mx-auto text-grey d-flex flex-column mt-5 mt-md-0"
+          >
             <img
               src="build/img/Source/4lugarDeLaFiesta.webp"
-              class=" rounded-5"
+              class="rounded-5"
               alt=""
             />
             <h2 class="text-black mt-5">Lugar de la fiesta</h2>
@@ -256,7 +255,7 @@
           >
             <h2 class="mt-5 text-grey">Galería de aventuras</h2>
             <div class="row flex gap-10 w-75">
-              <div class="col-4 galleryImageContainer">
+              <div class="col-4 col-md-3  galleryImageContainer">
                 <a
                   href="./build/img/gallery/1.webp"
                   data-fancybox="gallery"
@@ -633,7 +632,11 @@
     <footer
       class="footer container-fluid bg-black d-flex flex-column align-items-center text-center"
     >
-      <a href="" class="btn btn-outline-light mt-4"
+      <a
+        rel="nofollow"
+        target="_blank"
+        href="https://wa.me/5213318231058?text=Hola,%20me%20gustaría%20una%20invitación%20como%20esta"
+        class="btn btn-outline-light mt-4"
         >Quiero una invitacion como esta</a
       >
       <p class="mt-3">© Copyright 2024 . Todos los derechos reservados,</p>
@@ -761,14 +764,11 @@
     let icon2 = document.getElementById("stopIcon");
     buttonMusic.addEventListener("click", function () {
       if (audioButton1) {
-        
-        
         icon1.style.display = "none";
         icon2.style.display = "block";
 
         document.getElementById("miCancion").play();
       } else {
-        
         icon1.style.display = "block";
         icon2.style.display = "none";
 

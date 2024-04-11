@@ -12017,6 +12017,13 @@ textarea.form-control-lg {
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .galleryImageContainer {
+    height: 200px;
+    margin-bottom: 10px;
+    max-width: 280px;
+  }
+}
 .sweerAlertCustomize {
   border: none;
 }
